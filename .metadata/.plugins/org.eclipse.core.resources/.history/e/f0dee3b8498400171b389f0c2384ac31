@@ -1,0 +1,11 @@
+<Alloy>
+	<Window>
+	<View class="container">
+		 <ImageView id="image" />
+		
+	</View>
+	<Button onClick="prueba">Agregar Foto</Button>
+	<Button onClick="prueba">Capturados</Button>
+	<Button onClick="prueba">Eliminar</Button>
+	</Window>
+</Alloy>

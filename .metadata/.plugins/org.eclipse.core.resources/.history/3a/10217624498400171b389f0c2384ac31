@@ -1,0 +1,9 @@
+<Alloy>
+	<Window>
+	<View class="container">
+		 <ImageView id="image" />
+		
+	</View>
+	<Button onClick="prueba">Click</Button>
+	</Window>
+</Alloy>

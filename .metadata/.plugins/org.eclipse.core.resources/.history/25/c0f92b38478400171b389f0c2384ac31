@@ -1,0 +1,7 @@
+<Alloy>
+	<Window>
+	<View class="container">
+		<Button onClick="prueba">Click</Button>
+	</View>
+	</Window>
+</Alloy>

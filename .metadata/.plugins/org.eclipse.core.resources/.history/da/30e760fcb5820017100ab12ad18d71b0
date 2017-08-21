@@ -1,0 +1,25 @@
+<Alloy>
+	<Collection src="Fugitivos"/>
+	<TabGroup>
+	<Tab title="Fugitivos">
+		<Window>
+			<TableView id="lfugitivos" dataCollection="Fugitivos">
+				<TableViewRow id="lista">
+					<View id="personajes" textAlign="Ti.UI.TEXT_ALIGNMENT_LEFT">
+		    			<Label id="lbnombre" color="white" text="{nombre}"></Label>
+					</View>
+				</TableViewRow>
+			</TableView>
+		</Window>
+	</Tab>
+	<Tab title="Capturados" icon="assets/images/capturado.png">
+		<Window>
+			<TableView>
+				<TableViewRow>
+					
+				</TableViewRow>
+			</TableView>
+		</Window>
+	</Tab>
+	</TabGroup>
+</Alloy>

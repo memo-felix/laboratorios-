@@ -1,0 +1,20 @@
+var url = "http://uami-cgma.esy.es/prueba/prueba.txt";
+var json;
+var arreglo = [];
+var xhr = Ti.Network.createHTTPClient({
+    onload: function() {
+        json = JSON.parse(this.responseText);
+      
+      
+}
+});
+xhr.open('GET', url);
+xhr.send();
+
+
+
+function prueba(e) {
+	alert(arreglo);
+}
+
+$.index.open();

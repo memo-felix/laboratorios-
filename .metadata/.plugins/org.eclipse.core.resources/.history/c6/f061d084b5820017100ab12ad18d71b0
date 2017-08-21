@@ -1,0 +1,10 @@
+$.index.open();
+
+var nombres = ["Enedina Arellano Félix", "Juan José Esparragoza Moreno", "Ismael El Mayo Zambada", "Rafael Caro Quintero"];
+for(i=0;i<nombres.length;i++){
+	var listModel = Alloy.createModel("Fugitivos", {
+		nombre: nombres[i],
+	});
+	listModel.save();
+	Alloy.Collections.Fugitivos.fetch();
+}

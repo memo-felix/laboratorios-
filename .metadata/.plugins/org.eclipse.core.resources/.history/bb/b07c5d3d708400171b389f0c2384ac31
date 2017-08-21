@@ -1,0 +1,7 @@
+
+$.detallesfugitivos.open();
+
+
+function prueba(){
+	alert('Hola');
+}

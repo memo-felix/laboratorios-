@@ -1,0 +1,8 @@
+
+"#image" : {
+   backgroundColor: 'purple'
+}
+
+"#agregar": {
+	top: 20
+}

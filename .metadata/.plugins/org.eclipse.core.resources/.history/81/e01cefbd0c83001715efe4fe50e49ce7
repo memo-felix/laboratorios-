@@ -1,0 +1,6 @@
+<Alloy>
+	<Window class="container">
+		<Button onClick="prueba" title="Prueba Click" top="10" width="200" height="50"></Button>
+		<Label id="nombre" color="black"></Label>
+	</Window>
+</Alloy>

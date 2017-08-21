@@ -1,0 +1,25 @@
+var url = "http://uami-cgma.esy.es/prueba/prueba.txt";
+var json;
+var arreglo = [];
+var cantidad = json.length;
+var xhr = Ti.Network.createHTTPClient({
+    onload: function() {
+        json = JSON.parse(this.responseText);
+      
+       for (var i=0; i <cantidad; i++) {
+            var nombre = json.Fugitivos[i].nombre;
+             arreglo.push(nombre);
+        };
+       
+}
+});
+xhr.open('GET', url);
+xhr.send();
+
+
+
+function prueba(e) {
+	alert(arreglo);
+}
+
+$.index.open();

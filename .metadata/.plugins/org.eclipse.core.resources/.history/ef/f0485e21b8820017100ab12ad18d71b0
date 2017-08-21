@@ -1,0 +1,18 @@
+$.index.open();
+
+var nombres = ["Enedina Arellano Félix", "Juan José Esparragoza Moreno", "Ismael El Mayo Zambada", "Rafael Caro Quintero"];
+var nombres_capturados = ["Joaquín Loera Guzmán ", "Heriberto Lazcano Lazcano", "Arturo Beltrán Leyva", "Jorge Eduardo Costilla Sánchez"];
+for(i=0;i<nombres.length;i++){
+	var listModel = Alloy.createModel("Fugitivos", {
+		nombre: nombres[i],
+	});
+	listModel.save();
+	Alloy.Collections.Fugitivos.fetch();
+}
+for(j=0;j<nombres_capturados.length;j++){
+	var listModel = Alloy.createModel("Capturados", {
+		nombre: nombres_capturados[j],
+	});
+	listModel.save();
+	Alloy.Collections.Capturados.fetch();
+}

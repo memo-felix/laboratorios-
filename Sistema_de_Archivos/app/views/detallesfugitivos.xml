@@ -1,0 +1,9 @@
+<Alloy>
+	<Window>
+		
+		 <ImageView id="image" />
+	<Button id="agregar" onClick="agregar">Agregar Foto</Button>
+	<Button id= "capturados" >Capturados</Button>
+	<Button id="eliminar">Eliminar</Button>
+	</Window>
+</Alloy>

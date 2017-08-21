@@ -1,0 +1,5 @@
+<Alloy>
+	<Window class="container">
+		<Button onClick="doClick" title="Prueba Click" top="10" width="300" height="50"></Button>
+	</Window>
+</Alloy>

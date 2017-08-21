@@ -1,0 +1,47 @@
+
+$.detallesfugitivos.open();
+
+
+function prueba(){
+	alert('Hola');
+}
+
+function agregar(){
+	
+Titanium.Media.showCamera({
+	saveToPhotoGallery : true,
+	success : function(event) {
+
+		// place our picture into our window
+		var imageView = Ti.UI.createImageView({
+			image : event.media,
+			width : 320,
+			height : 480
+		});
+		win.add(imageView);
+
+		win.open();
+		alert("picture was taken");
+		//alert(event);
+		// programatically hide the camera
+		//Ti.Media.hideCamera();
+	},
+	cancel : function() {
+	},
+	error : function(error) {
+		var a = Titanium.UI.createAlertDialog({
+			title : 'Camera'
+		});
+		if (error.code == Titanium.Media.NO_CAMERA) {
+			a.setMessage('Please run this test on device');
+		} else {
+			a.setMessage('Unexpected error: ' + error.code);
+		}
+		a.show();
+	},
+	overlay : overlay,
+	showControls : false, // don't show system controls
+	mediaTypes : Ti.Media.MEDIA_TYPE_PHOTO,
+	autohide : false // tell the system not to auto-hide and we'll do it ourself
+});
+}

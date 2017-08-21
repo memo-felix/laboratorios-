@@ -1,0 +1,75 @@
+
+$.detallesfugitivos.open();
+
+
+function agregar(e){
+	 var mensaje = Ti.UI.createAlertDialog({
+    cancel: 0, galery: 2, camara:3,
+    buttonNames: ['cancelar', 'Cámara', 'Galeria'],
+    message: 'Seleccione una opción para agregar la foto',
+    title: 'Capturar'
+  });
+  mensaje.addEventListener('click', function(e){
+    if (e.index === e.source.cancel){
+      Ti.API.info('The cancel button was clicked');
+    }
+    if (e.index === e.source.camara){
+     Titanium.Media.showCamera({
+		success:function(e){
+			var image = e.media;
+			$.image.image = image;
+			
+		},
+		error:function(e){
+			alert("Aparecio un error");
+		},
+		allowEditing:true,
+		saveToPhotoGallery:true,
+		mediaTypes:[Titanium.Media.MEDIA_TYPE_PHOTO],
+	});
+    }
+    if(e.index === e.source.galery){
+    	  Titanium.Media.openPhotoGallery({
+        success:function(event){
+        
+        	var image = e.media;
+			$.image.image = image;
+			
+		},
+		error:function(e){
+			alert("Aparecio un error");
+		}
+	});
+
+  }
+  mensaje.show();
+}
+
+
+function capturado(){
+	var menuDialogo = Ti.UI.createOptionDialog({
+		options : ['Capturar', 'Cancelar'],
+		destructive : 0,
+		title : 'Ya has capturado a este fugitivo?'
+	});
+	menuDialogo.addEventListener('click', function(e) {
+		if (e.index === 0) {
+			alert('FELICIDADES\n\nCapturaste al fugitivo');
+		}
+	});
+	menuDialogo.show();
+}
+
+function eliminado(){
+	var menuDialogo = Ti.UI.createOptionDialog({
+		options : ['Eliminar', 'Cancelar'],
+		destructive : 0,
+		title : 'Deseas eliminar a este Fugitivo?'
+	});
+	menuDialogo.addEventListener('click', function(e) {
+		if (e.index === 0) {
+			alert('Fugitivo Eliminado\n\nApuesto que alguien ya lo capturo');
+		}
+	});
+	menuDialogo.show();
+}

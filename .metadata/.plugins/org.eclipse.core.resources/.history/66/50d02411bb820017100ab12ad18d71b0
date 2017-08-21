@@ -1,0 +1,30 @@
+<Alloy>
+	<!--<Collection src="Capturados"/>-->
+
+	<Collection src="Fugitivos"/>
+	
+		<TabGroup>
+	<Tab title="Fugitivos">
+		<Window>
+			<TableView id="lfugitivos" dataCollection="Fugitivos">
+				<TableViewRow id="lista">
+					<View id="personajes" textAlign="Ti.UI.TEXT_ALIGNMENT_LEFT">
+		    			<Label id="lbnombre" color="white" text="{nombre}"></Label>
+					</View>
+				</TableViewRow>
+			</TableView>
+		</Window>
+	</Tab>
+	<Tab title="Capturados">
+		<Window>
+			<TableView id="lcapturados" dataCollection="Fugitivos">
+				<TableViewRow id="lista_capturados">
+					<View id="personajes_capturados">
+		    			<Label id="lbnombre_cap" color="white" text="{nombre}"></Label>
+					</View>
+				</TableViewRow>
+			</TableView>
+		</Window>
+	</Tab>
+	</TabGroup>
+</Alloy>

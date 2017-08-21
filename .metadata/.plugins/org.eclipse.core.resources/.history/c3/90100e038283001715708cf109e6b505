@@ -1,0 +1,16 @@
+   <Alloy>
+        <TabGroup backgroundColor="black" >
+            <Tab id="tab1" title="Fugitivos" icon="KS_nav_views.png">
+                <Window id="win1" title="Fugitivos">
+                   <Label id="label1" color="white">Hola</Label>
+                   <Button onClick="prueba" title="Prueba Click" top="10" width="200" height="50"></Button>
+                </Window>
+            </Tab>
+            <Tab id="tab2" title="Capturados" icon="KS_nav_views.png">
+                <Window id="win2" title="Capturados">
+                    <Label id="label2" color="white">Hola</Label>
+                </Window>
+            </Tab>
+            <!-- Use the Require tag to include external Ti.UI.Tab views -->
+        </TabGroup>
+    </Alloy>

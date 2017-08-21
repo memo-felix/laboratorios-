@@ -1,0 +1,9 @@
+<Alloy>
+	<Window>
+	<View class="container">
+		 <ImageView id="image" image="assets/android/images/fugitivo.png" />
+		
+	</View>
+	<Button onClick="prueba">Click</Button>
+	</Window>
+</Alloy>

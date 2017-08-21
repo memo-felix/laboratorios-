@@ -1,0 +1,26 @@
+var url = "http://uami-cgma.esy.es/prueba/prueba.txt";
+var json, fugitivos, capturados;
+var arreglo_fugitivos = [];
+var arreglo_capturados = [];
+
+var xhr = Ti.Network.createHTTPClient({
+    onload: function() {
+        json = JSON.parse(this.responseText);
+        //var pjson =JSON.stringify(json);
+        
+      for (var i=0; i <4; i++) {
+             fugitivos = json.Fugitivos[i].nombre;
+             //capturados = json.Capturados[i].nombre;
+             //arreglo_fugitivos.push(fugitivos);
+             //arreglo_capturados.push(capturados);
+             	
+        };
+}
+});
+xhr.open('GET', url);
+xhr.send();
+function prueba() {
+
+alert(arreglo_fugitivos[3]);
+}
+$.index.open();

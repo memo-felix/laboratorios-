@@ -1,0 +1,17 @@
+
+"#image" : {
+   backgroundColor: 'purple'
+}
+
+"#agregar": {
+	top: 20
+}
+
+"#capturados": {
+	top: 60
+}
+
+"#eliminar": {
+	top: 100
+}
+
